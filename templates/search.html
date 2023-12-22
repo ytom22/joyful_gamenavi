@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <title>ジョイフル・ゲームナビ</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href=".././static/css/style.css">
+</head>
+
+<body>
+  <header  class="header">
+    <h1 class="webtitle">
+        <a class="toplink" href="/">ジョイフル・ゲームナビ</a>
+    </h1>
+    <nav>
+      <ul>
+        <li class="head_list">
+            <a href="/">HOME</a>
+        </li>
+        <li class="head_list">
+            <a href="/search">ワード検索</a>
+        </li>
+        <li class="head_list">
+            <a href="/search2">タブ検索</a>
+        </li>
+      </ul>
+    </nav>
+    
+  </header>
+    
+  <div class="content">
+      <h1>
+        ワード検索ページ
+      </h1>
+      <p>
+          好きな単語を入力してください
+      </p>
+
+      <form action="/result" method="post">
+        <input type="text" size="50" name="fav" placeholder="ex）仲良く、パズル、激しい">
+        
+        <input type="submit" value="検索">
+      </form>
+  </div>
+    
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <title>ジョイフル・ゲームナビ</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href=".././static/css/style.css">
+</head>
+
+<body>
+    <header  class="header">
+        <h1 class="webtitle">
+            <a class="toplink" href="/">ジョイフル・ゲームナビ</a>
+        </h1>
+        <nav>
+            <ul>
+                <li class="head_list">
+                    <a href="/">HOME</a>
+                </li>
+                <li class="head_list">
+                    <a href="/search">ワード検索</a>
+                </li>
+                <li class="head_list">
+                    <a href="/search2">タブ検索</a>
+                </li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <div class="content">
+        <h1>
+            タブ検索ページ
+        </h1>
+        <p>
+            条件を指定してください
+        </p>
+        <div class="tabsearch">
+            <form action="/result2" method="post">
+                <h4>値段</h4>
+                <label><input type="checkbox" name="fee" value="無料">無料</label>
+                <label><input type="checkbox" name="fee" value="基本無料">基本無料</label>
+                <label><input type="checkbox" name="fee" value="有料">有料</label>
+                <h4>時間</h4>
+                <label><input type="checkbox" name="time" value="5">5分</label>
+                <label><input type="checkbox" name="time" value="15">15分</label>
+                <label><input type="checkbox" name="time" value="30">30分</label>
+                <label><input type="checkbox" name="time" value="45">45分</label>
+                <label><input type="checkbox" name="time" value="60">1時間</label>
+                <label><input type="checkbox" name="time" value="120">2時間</label>
+                <h4>人数</h4>
+                <label><input type="checkbox" name="people" value="1">1人</label>
+                <label><input type="checkbox" name="people" value="2">2人</label>
+                <label><input type="checkbox" name="people" value="3">3人</label>
+                <label><input type="checkbox" name="people" value="4">4人</label>
+                <label><input type="checkbox" name="people" value="5">5人</label>
+                <label><input type="checkbox" name="people" value="6">6人</label>
+                <label><input type="checkbox" name="people" value="7">7人</label>
+                <label><input type="checkbox" name="people" value="8">8人</label>
+                <label><input type="checkbox" name="people" value="9">9人</label>
+                <label><input type="checkbox" name="people" value="10">10人</label>
+                <h4>インストール</h4>
+                <label><input type="checkbox" name="need" value="必須">必須</label>
+                <label><input type="checkbox" name="need" value="不要">不要</label>
+
+                <input type="submit" value="検索">
+            </form>
+        </div>
+    </div>
+</body>

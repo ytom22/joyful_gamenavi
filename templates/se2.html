@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <title>ゲーム検索（仮）</title>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <a href="/">TOPへ戻る</a>
+    <h1>検索ページ</h1>
+    <p>
+        好きな単語や条件を指定してください
+    </p>
+    <div class="searchform">
+        </div class="wordsearch">
+        
+            <input type="text" size="50" name="fav" placeholder="ex）仲良く、パズル、激しい">
+        </div>
+        <div class="c-searchForm_control">
+            <!-- <label for="q[p]">人数</label> -->
+            <label >人数</label>
+            <ul class="c-searchForm_checkBox">
+              <li class="c-multiSelect _people_">
+                <input type="radio" name="q[p]" id="q_people_1" value="1" class="c-multiSelect_input _radio_">
+                <label class="c-multiSelect-label" for="q_people_1">
+                1人
+        </label>      </li>
+              <li class="c-multiSelect _people_">
+                <input type="radio" name="q[p]" id="q_people_2" value="2" class="c-multiSelect_input _radio_">
+                <label class="c-multiSelect-label" for="q_people_2">
+                2人
+        </label>      </li>
+              <li class="c-multiSelect _people_">
+                <input type="radio" name="q[p]" id="q_people_3" value="3" class="c-multiSelect_input _radio_">
+                <label class="c-multiSelect-label" for="q_people_3">
+                3人
+        </label>      </li>
+              <li class="c-multiSelect _people_">
+                <input type="radio" name="q[p]" id="q_people_4" value="4" class="c-multiSelect_input _radio_">
+                <label class="c-multiSelect-label" for="q_people_4">
+                4人
+        </label>      </li>
+              <li class="c-multiSelect _people_">
+                <input type="radio" name="q[p]" id="q_people_5" value="5" class="c-multiSelect_input _radio_">
+                <label class="c-multiSelect-label" for="q_people_5">
+                5人
+        </label>      </li>
+              <li class="c-multiSelect _people_">
+                <input type="radio" name="q[p]" id="q_people_6" value="6" class="c-multiSelect_input _radio_">
+                <label class="c-multiSelect-label" for="q_people_6">
+                6人
+        </label>      </li>
+              <li class="c-multiSelect _people_">
+                <input type="radio" name="q[p]" id="q_people_7" value="7" class="c-multiSelect_input _radio_">
+                <label class="c-multiSelect-label" for="q_people_7">
+                7人
+        </label>      </li>
+              <li class="c-multiSelect _people_">
+                <input type="radio" name="q[p]" id="q_people_8" value="8" class="c-multiSelect_input _radio_">
+                <label class="c-multiSelect-label" for="q_people_8">
+                8人
+        </label>      </li>
+              <li class="c-multiSelect _people_">
+                <input type="radio" name="q[p]" id="q_people_9" value="9" class="c-multiSelect_input _radio_">
+                <label class="c-multiSelect-label" for="q_people_9">
+                9人
+        </label>      </li>
+              <li class="c-multiSelect _people_">
+                <input type="radio" name="q[p]" id="q_people_10" value="10" class="c-multiSelect_input _radio_">
+                <label class="c-multiSelect-label" for="q_people_10">
+                10人
+        </label>      </li>
+            </ul>
+        </div>
+        <div class="c-searchForm_control">
+            <label for="q[t]">時間</label>
+            <ul class="c-searchForm_checkBox">
+              <li class="c-multiSelect _radio_  _time_">
+                <input type="radio" name="q[t]" id="q_time_5" value="5" class="c-multiSelect_input _radio_">
+                <label class="c-multiSelect-label" for="q_time_5">
+                5分
+        </label>      </li>
+              <li class="c-multiSelect _radio_  _time_">
+                <input type="radio" name="q[t]" id="q_time_15" value="15" class="c-multiSelect_input _radio_">
+                <label class="c-multiSelect-label" for="q_time_15">
+                15分
+        </label>      </li>
+              <li class="c-multiSelect _radio_  _time_">
+                <input type="radio" name="q[t]" id="q_time_30" value="30" class="c-multiSelect_input _radio_">
+                <label class="c-multiSelect-label" for="q_time_30">
+                30分
+        </label>      </li>
+              <li class="c-multiSelect _radio_  _time_">
+                <input type="radio" name="q[t]" id="q_time_45" value="45" class="c-multiSelect_input _radio_">
+                <label class="c-multiSelect-label" for="q_time_45">
+                45分
+        </label>      </li>
+              <li class="c-multiSelect _radio_  _time_">
+                <input type="radio" name="q[t]" id="q_time_60" value="60" class="c-multiSelect_input _radio_">
+                <label class="c-multiSelect-label" for="q_time_60">
+                1時間
+        </label>      </li>
+              <li class="c-multiSelect _radio_  _time_">
+                <input type="radio" name="q[t]" id="q_time_120" value="120" class="c-multiSelect_input _radio_">
+                <label class="c-multiSelect-label" for="q_time_120">
+                2時間
+        </label>      </li>
+            </ul>
+        </div>
+        <div class="c-searchForm_control">
+            <label for="q[pt][]">料金
+              (複数選択可能)
+            </label>
+            <ul class="c-searchForm_checkBox">
+              <li class="c-multiSelect _price_type_">
+                <input type="checkbox" name="q[pt][]" id="q_pt_0" value="0" class="c-multiSelect_input">
+                <label class="c-multiSelect-label" for="q_pt_0">
+                無料
+        </label>      </li>
+              <li class="c-multiSelect _price_type_">
+                <input type="checkbox" name="q[pt][]" id="q_pt_1" value="1" class="c-multiSelect_input">
+                <label class="c-multiSelect-label" for="q_pt_1">
+                基本無料
+        </label>      </li>
+              <li class="c-multiSelect _price_type_">
+                <input type="checkbox" name="q[pt][]" id="q_pt_2" value="2" class="c-multiSelect_input">
+                <label class="c-multiSelect-label" for="q_pt_2">
+                有料
+        </label>      </li>
+            </ul>
+        </div>
+        <div class="c-searchForm_control">
+            <label for="q[i]">インストール</label>
+            <ul class="c-searchForm_checkBox">
+              <li class="c-multiSelect _install_">
+                <input type="radio" name="q[i]" id="q_is_required_install_true" value="true" class="c-multiSelect_input _radio_">
+                <label class="c-multiSelect-label" for="q_is_required_install_true">
+                必須
+        </label>      </li>
+              <li class="c-multiSelect _install_">
+                <input type="radio" name="q[i]" id="q_is_required_install_false" value="false" class="c-multiSelect_input _radio_">
+                <label class="c-multiSelect-label" for="q_is_required_install_false">
+                不要
+        </label>      </li>
+            </ul>
+        </div>
+        <div class="c-searchForm_control">
+            <label for="q[tag_ids][]">タグ
+              (複数選択可能)
+            </label>
+            <ul class="c-searchForm_checkBox">
+              <li class="c-multiSelect _tags_">
+                <input type="checkbox" name="q[tag_ids][]" id="q_tag_ids_48" value="48" class="c-multiSelect_input">
+                <label class="c-multiSelect-label" for="q_tag_ids_48">
+                パズル
+        </label>      </li>
+              <li class="c-multiSelect _tags_">
+                <input type="checkbox" name="q[tag_ids][]" id="q_tag_ids_47" value="47" class="c-multiSelect_input">
+                <label class="c-multiSelect-label" for="q_tag_ids_47">
+                盛り上がる
+        </label>      </li>
+              <li class="c-multiSelect _tags_">
+                <input type="checkbox" name="q[tag_ids][]" id="q_tag_ids_46" value="46" class="c-multiSelect_input">
+                <label class="c-multiSelect-label" for="q_tag_ids_46">
+                お絵かき
+        </label>      </li>
+              <li class="c-multiSelect _tags_">
+                <input type="checkbox" name="q[tag_ids][]" id="q_tag_ids_45" value="45" class="c-multiSelect_input">
+                <label class="c-multiSelect-label" for="q_tag_ids_45">
+                チーム戦
+        </label>      </li>
+              <li class="c-multiSelect _tags_">
+                <input type="checkbox" name="q[tag_ids][]" id="q_tag_ids_44" value="44" class="c-multiSelect_input">
+                <label class="c-multiSelect-label" for="q_tag_ids_44">
+                シミュレーション
+        </label>      </li>
+              <li class="c-multiSelect _tags_">
+                <input type="checkbox" name="q[tag_ids][]" id="q_tag_ids_43" value="43" class="c-multiSelect_input">
+                <label class="c-multiSelect-label" for="q_tag_ids_43">
+                対人
+        </label>      </li>
+              <li class="c-multiSelect _tags_">
+                <input type="checkbox" name="q[tag_ids][]" id="q_tag_ids_42" value="42" class="c-multiSelect_input">
+                <label class="c-multiSelect-label" for="q_tag_ids_42">
+                推理
+        </label>      </li>
+              <li class="c-multiSelect _tags_">
+                <input type="checkbox" name="q[tag_ids][]" id="q_tag_ids_39" value="39" class="c-multiSelect_input">
+                <label class="c-multiSelect-label" for="q_tag_ids_39">
+                サバイバル
+        </label>      </li>
+              <li class="c-multiSelect _tags_">
+                <input type="checkbox" name="q[tag_ids][]" id="q_tag_ids_41" value="41" class="c-multiSelect_input">
+                <label class="c-multiSelect-label" for="q_tag_ids_41">
+                クラフト
+        </label>      </li>
+              <li class="c-multiSelect _tags_">
+                <input type="checkbox" name="q[tag_ids][]" id="q_tag_ids_40" value="40" class="c-multiSelect_input">
+                <label class="c-multiSelect-label" for="q_tag_ids_40">
+                協力
+        </label>      </li>
+              <li class="c-multiSelect _tags_">
+                <input type="checkbox" name="q[tag_ids][]" id="q_tag_ids_38" value="38" class="c-multiSelect_input">
+                <label class="c-multiSelect-label" for="q_tag_ids_38">
+                ゾンビ
+        </label>      </li>
+              <li class="c-multiSelect _tags_">
+                <input type="checkbox" name="q[tag_ids][]" id="q_tag_ids_37" value="37" class="c-multiSelect_input">
+                <label class="c-multiSelect-label" for="q_tag_ids_37">
+                シューティング
+        </label>      </li>
+              <li class="c-multiSelect _tags_">
+                <input type="checkbox" name="q[tag_ids][]" id="q_tag_ids_36" value="36" class="c-multiSelect_input">
+                <label class="c-multiSelect-label" for="q_tag_ids_36">
+                タワーディフェンス
+        </label>      </li>
+              <li class="c-multiSelect _tags_">
+                <input type="checkbox" name="q[tag_ids][]" id="q_tag_ids_35" value="35" class="c-multiSelect_input">
+                <label class="c-multiSelect-label" for="q_tag_ids_35">
+                ストラテジーゲーム
+        </label>      </li>
+              <li class="c-multiSelect _tags_">
+                <input type="checkbox" name="q[tag_ids][]" id="q_tag_ids_34" value="34" class="c-multiSelect_input">
+                <label class="c-multiSelect-label" for="q_tag_ids_34">
+                リアルタイム
+        </label>      </li>
+              <li class="c-multiSelect _tags_">
+                <input type="checkbox" name="q[tag_ids][]" id="q_tag_ids_29" value="29" class="c-multiSelect_input">
+                <label class="c-multiSelect-label" for="q_tag_ids_29">
+                ボードゲーム
+        </label>      </li>
+              <li class="c-multiSelect _tags_">
+                <input type="checkbox" name="q[tag_ids][]" id="q_tag_ids_25" value="25" class="c-multiSelect_input">
+                <label class="c-multiSelect-label" for="q_tag_ids_25">
+                発想力
+        </label>      </li>
+              <li class="c-multiSelect _tags_">
+                <input type="checkbox" name="q[tag_ids][]" id="q_tag_ids_23" value="23" class="c-multiSelect_input">
+                <label class="c-multiSelect-label" for="q_tag_ids_23">
+                対戦
+        </label>      </li>
+              <li class="c-multiSelect _tags_">
+                <input type="checkbox" name="q[tag_ids][]" id="q_tag_ids_21" value="21" class="c-multiSelect_input">
+                <label class="c-multiSelect-label" for="q_tag_ids_21">
+                RPG
+        </label>      </li>
+            </ul>
+        </div>
+        <form action="/result" method="POST">
+            <input type="submit" value="検索">
+        </form>
+    </div>
+    
+</body>
+
+</html>
