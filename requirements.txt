@@ -1,0 +1,6 @@
+gunicorn==20.0.4
+torch==2.1.1
+flask==2.2.2
+pandas==2.1.1
+scipy==1.11.3
+sentencepiece==0.1.99
