@@ -31,7 +31,7 @@ def result():
         return render_template('result.html')
     elif request.method == "POST":
      
-        sentence_embeddings = torch.load("sentence_embeddings.pt")
+        sentence_embeddings = torch.load("sentence_embeddings.pt") #ベクトルデータ読み込み
         try:
 
             fav = request.form.get("fav")# name属性がfavのtextボックスから単一の値を取得

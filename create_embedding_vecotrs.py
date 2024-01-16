@@ -67,12 +67,7 @@ data = pd.read_csv(csv_file_path)
 # 指定した列のデータをリストに追加
 sentences = data[target_column_name].tolist()
 
-# 標準入力で、理想のビールのイメージを文章で受け取る
-# query = input()
-# query = "aaa"
-# sentences.append(query)
-
-# ビールの説明文、受け取った文章をエンコード（ベクトル表現に変換）
+# ゲームの説明文をベクトル表現に変換して保存
 sentence_embeddings = model.encode(sentences, batch_size=8)
 print(sentence_embeddings.shape)
 torch.save(sentence_embeddings,"sentence_embeddings.pt")
