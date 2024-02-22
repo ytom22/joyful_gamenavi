@@ -66,18 +66,12 @@ def recommend(query,sentence_embeddings):
         # 指定した列のデータをリストに追加
         sentences = data[target_column_name].tolist()
 
-        # 標準入力で、理想のビールのイメージを文章で受け取る
-        # query = input()
-        # query = "aaa"
         sentences.append(query)
         query_embedding_vector = model.encode([query], batch_size=8)
         # print("query:")
         # print( query_embedding_vector.shape)
         sentence_embeddings = torch.vstack((sentence_embeddings, query_embedding_vector))
         print(sentence_embeddings.shape)
-        # ビールの説明文、受け取った文章をエンコード（ベクトル表現に変換）
-        # sentence_embeddings = model.encode(sentences, batch_size=8)
-        # print(sentence_embeddings.shape)
 
         # 類似度上位1つを出力
         closest_n = 1
@@ -96,54 +90,18 @@ def recommend(query,sentence_embeddings):
         index1= data[data['detail']==sentences[results[1][0]]].index[0]
         index2= data[data['detail']==sentences[results[2][0]]].index[0]
 
+        print(index1)
+        # csvファイルのデータ呼び出し
         return data.iloc[index1,1],data.iloc[index1,2],data.iloc[index1,3],data.iloc[index1,4],data.iloc[index1,5],data.iloc[index1,7],data.iloc[index1,8],data.iloc[index1,9],data.iloc[index1,10]
 
-def read_csv():
-     with open('gamedata4_df.csv', 'r', encoding='utf-8') as csvfile:
-          reader = csv.DictReader(csvfile)
-          data = list(reader)
-     return data
-
-# def search_timedata(csvfilename,targettime):
-#      results = []
-
-#      def extract_duration_range(duration):
-#      # '~'が含まれている場合は時間範囲を取得
-#           if '~' in duration:
-#                return [int(value) for value in duration.replace('分', '').split('~')]
-#           else:
-#                # '~'が含まれていない場合はそのままの値を返す
-#                return [int(duration.replace('分', ''))]
-     
-#      def time_in_range(time, time_range):
-#      # 目標の時間を整数に変換
-#           time = int(time)
-
-#           if len(time_range) == 1:
-#                if time == time_range[0]:
-#                     return True
-
-#           elif len(time_range) == 2:
-#                if time >= time_range[0] and time <= time_range[1]:
-#                     return True
-
-#           else:
-#                return False
-#      def search_data_by_time(csv_filename, time):
-
-#      # CSVファイルからデータを読み込む
-#         with open(csv_filename, 'r', encoding='utf-8') as csvfile:
+# def read_csv():
+#      with open('gamedata4_df.csv', 'r', encoding='utf-8') as csvfile:
 #           reader = csv.DictReader(csvfile)
-          
-#           # CSVデータをループして条件に一致するデータを探す
-#           for row in reader:
-#                time_range = extract_duration_range(row['time'])
-#                print(time_range)
-#                if time_in_range(time,time_range):
-#                     results.append(row['title'])
+#           data = list(reader)
+#      return data
 
-#      return results
 
+#プレイ時間で絞り込み
 def search_data_by_duration(csv_filename, target_duration):
     results = []
 
@@ -174,8 +132,9 @@ def search_data_by_duration(csv_filename, target_duration):
 
     return results
 
+#プレイ人数で絞り込み
 def search_data_by_people(csv_filename, target_people):
-    results = []
+    results2 = []
 
     def extract_people_range(people):
         if '~' in people:
@@ -199,8 +158,14 @@ def search_data_by_people(csv_filename, target_people):
         for row in reader:
             people_range = extract_people_range(row['people'])
             if is_people_in_range(target_people, people_range):
-                result_dict = {key: row[key] for key in ['title','apple_url','google_url','web_url']}
-                results.append(result_dict)
+                result_dict = {key: row[key] for key in ['title','few','people','time','install','tag','apple_url','google_url','web_url']}
+                results2.append(result_dict)
 
-    return results
+    return results2
  
+ #料金で絞り込み
+def search_data_by_people(csv_filename, target_few):
+    results3 = []
+
+
+#インストールの有無で絞り込み
