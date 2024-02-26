@@ -55,28 +55,28 @@ def result2():
     elif request.method == "POST":
         try:
             time = request.form.getlist("time") # name属性がtimeのtextボックスから単一の値を取得
-            people = request.form.getlist("people") # name属性がpeopleのtextボックスから単一の値を取得
+            # people = request.form.getlist("people") # name属性がpeopleのtextボックスから単一の値を取得
 
             # print(time)
             # print(people)
 
             # results = [game['title'] for game in data if game['Duration'] == fav]      
                   
-            true_results = [] #最終的な結果リスト
-            # results=[]
+            # true_results = [] #最終的な結果リスト
+            results=[]
             # results2=[]
             
             results = search_data_by_duration("gamedata4_df.csv", time[0])
-            results2 = search_data_by_people("gamedata4_df.csv", people[0])
+            # results2 = search_data_by_people("gamedata4_df.csv", people[0])
 
-            print(results2[0])
-            print(type(results2[0])) #"resuts2"はdict型が並んだリスト型
+            print(results[0])
+            print(type(results[0])) #"resuts2"はdict型が並んだリスト型
 
             # true_results = (set(results) &set(results2))
             
             # print(type(true_results))
 
-            return render_template('tab_result.html', results=true_results)#左辺がHTML、右辺がPython側の変数
+            return render_template('tab_result.html', results=results)#左辺がHTML、右辺がPython側の変数
         except KeyError as e:
             return f"KeyError: {e}"
 
